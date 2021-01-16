@@ -1,0 +1,23 @@
+{
+  "name": "site_littleson",
+  "version": "0.1.0",
+  "description": "Site oficial do projeto Little Son",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Little-Son/site_littleson.git"
+  },
+  "keywords": [
+    "littleson",
+    "blogger"
+  ],
+  "author": "Jamil Filho",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Little-Son/site_littleson/issues"
+  },
+  "homepage": "https://github.com/Little-Son/site_littleson#readme"
+}
