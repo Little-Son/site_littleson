@@ -29,11 +29,12 @@ const Info = styled.section`
     justify-content:center;
     align-items:center;
     text-align:center;
-    background:#fafafa;
+    background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
 
     h1 {
         font-family:sans-serif;
         font-size:3rem;
+        margin-bottom:1rem;
     }
 
     h2 {
