@@ -8,6 +8,7 @@ import { Main } from '../components/Main'
 import { FeedHeader, DevocionalFeed, BibliotecaFeed } from '../components/Feed'
 import { PostCard, PostCardHeader, PostTag, PostCardContent } from '../components/PostCard'
 import { signIn, signOut, useSession } from 'next-auth/client'
+import gravatar from 'gravatar'
 import styled from 'styled-components'
 
 function closeOffCanvas() {
@@ -18,7 +19,7 @@ function openOffCanvas() {
 }
 
 export default function HomePage() {
-    const [ session, loading ] = useSession()
+    const [ session, loading] = useSession()
     return(
         <div>
             <Head>
@@ -42,13 +43,13 @@ export default function HomePage() {
                         </LoginButton>
                     }
                     {session && 
-                        // <UserAvatar>
-                        //     <img src={session.user.image}/>
-                        // </UserAvatar>
+                        <UserAvatar>
+                            <img src={gravatar.url(session.user.email, {protocol: 'https'})}/>
+                        </UserAvatar>
                         
-                        <LoginButton onClick={signOut}>
-                            Sair
-                        </LoginButton>
+                        // <LoginButton onClick={signOut}>
+                        //     Sair
+                        // </LoginButton>
                     }
                     <OffCanvasButton>
                         <Menu size="24"/>

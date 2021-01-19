@@ -23,6 +23,7 @@
   "homepage": "https://github.com/Little-Son/site_littleson#readme",
   "dependencies": {
     "graphql-request": "^3.4.0",
+    "gravatar": "^1.8.1",
     "mongodb": "^3.6.3",
     "next": "^10.0.5",
     "next-auth": "^3.1.0",

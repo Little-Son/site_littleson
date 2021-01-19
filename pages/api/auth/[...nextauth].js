@@ -69,7 +69,7 @@ const text = ({ url, site }) => `Entrar ${site}\n${url}\n\n`
 
 const options = {
   // pages: {
-  //   signIn: '/auth/signin',
+  //   verifyRequest: '/auth/verify-request'
   // },
   // Configure one or more authentication providers
   providers: [

@@ -11,6 +11,12 @@ const GlobalStyle = createGlobalStyle`
     html {
         font-size:62.5%;
     }
+    a, a:hover, a:focus {
+        text-decoration:none;
+    }
+    a, button {
+        cursor: pointer;
+    }
 `
 
 export default GlobalStyle
