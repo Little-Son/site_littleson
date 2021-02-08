@@ -54,6 +54,7 @@ const Ads = styled.div`
 
 export default function HomePage() {
     return(
+        <>
         <Head>
             <script async src="https://www.googletagmanager.com/gtag/js?id=UA-43096087-1"></script>
             <script src="/scripts/analytics.js" />
@@ -70,5 +71,6 @@ export default function HomePage() {
                 </Ads>
             </Info>
         </div>
+        </>
     )
 }
