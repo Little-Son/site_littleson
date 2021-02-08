@@ -44,6 +44,10 @@ const Info = styled.section`
         font-size:1.6rem;
     }
 
+    div {
+        height:90vh;
+    }
+
 `
 
 const Ads = styled.div`
@@ -70,8 +74,11 @@ export default function HomePage() {
         <div>
             <GlobalStyle />
             <Info>
-                <h1>Estamos offline</h1>
-                <h2>Hey, aguarde só um pouco, estamos atualizando o projeto Little Son.</h2>
+                <div>
+                    <h1>Estamos offline</h1>
+                    <h2>Hey, aguarde só um pouco, estamos atualizando o projeto Little Son.</h2>
+                </div>
+                
                 <Ads>
                     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
                     <GoogleAds/>
