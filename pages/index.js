@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import styled from 'styled-components'
 import { createGlobalStyle } from "styled-components"
 
@@ -53,6 +54,10 @@ const Ads = styled.div`
 
 export default function HomePage() {
     return(
+        <Head>
+            <script async src="https://www.googletagmanager.com/gtag/js?id=UA-43096087-1"></script>
+            <script src="/scripts/analytics.js" />
+        </Head>
         <div>
             <GlobalStyle />
             <Info>
