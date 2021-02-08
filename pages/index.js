@@ -24,7 +24,7 @@ const GlobalStyle = createGlobalStyle`
 
 const Info = styled.section`
     width:100vw;
-    height:100vh;
+    min-height:100vh;
     color:#212121;
     display:flex;
     flex-direction:column;
@@ -47,8 +47,7 @@ const Info = styled.section`
 `
 
 const Ads = styled.div`
-    position:absolute;
-    bottom:5vh;
+    margin-top:4rem;
     width:90vw;
     height:20vh;
 `
