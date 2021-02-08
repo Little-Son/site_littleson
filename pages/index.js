@@ -56,6 +56,7 @@ export default function HomePage() {
     return(
         <>
         <Head>
+            <title>Little Son | Estamos em manutenção</title>
             <script async src="https://www.googletagmanager.com/gtag/js?id=UA-43096087-1"></script>
             <script src="/scripts/analytics.js" />
         </Head>
@@ -66,7 +67,7 @@ export default function HomePage() {
                 <h2>Hey, aguarde só um pouco, estamos atualizando o projeto Little Son.</h2>
                 <Ads>
                     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                    <ins className="adsbygoogle" data-ad-client="ca-pub-8744567957048944" data-ad-slot="4351792874" data-ad-format="auto" data-full-width-responsive="true"></ins>
+                    <ins className="adsbygoogle" style="display:block" data-ad-client="ca-pub-8744567957048944" data-ad-slot="4351792874" data-ad-format="auto" data-full-width-responsive="true"></ins>
                     <script src="/scripts/ads.js" />
                 </Ads>
             </Info>
