@@ -55,7 +55,7 @@ const Ads = styled.div`
 
 class GoogleAds extends React.Component{
     render() {
-        const block = "display:block"
+        const block = "block"
         return <ins className="adsbygoogle" style={{display: block}} data-ad-client="ca-pub-8744567957048944" data-ad-slot="4351792874" data-ad-format="auto" data-full-width-responsive="true"></ins>
     }
 }
