@@ -13,6 +13,7 @@ const GlobalStyle = createGlobalStyle`
     }
     html {
         font-size:62.5%;
+        overflow-x:hidden;
     }
     a, a:hover, a:focus {
         text-decoration:none;
@@ -45,7 +46,13 @@ const Info = styled.section`
     }
 
     div {
-        height:90vh;
+        height:40vh;
+        display:flex;
+        flex-direction:column;
+        justify-content:flex-end;
+        align-items:center;
+        text-align:center;
+        padding-bottom:4rem;
     }
 
 `
@@ -53,7 +60,7 @@ const Info = styled.section`
 const Ads = styled.div`
     margin-top:4rem;
     width:90vw;
-    height:20vh;
+    background:#c2e9fb;
 `
 
 class GoogleAds extends React.Component{
