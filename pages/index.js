@@ -1,3 +1,4 @@
+import React from 'react'
 import Head from 'next/head'
 import styled from 'styled-components'
 import { createGlobalStyle } from "styled-components"
@@ -52,6 +53,13 @@ const Ads = styled.div`
     height:20vh;
 `
 
+class GoogleAds extends React.Component{
+    render() {
+        const block = "display:block"
+        return <ins className="adsbygoogle" style={{display: block}} data-ad-client="ca-pub-8744567957048944" data-ad-slot="4351792874" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    }
+}
+
 export default function HomePage() {
     return(
         <>
@@ -67,7 +75,7 @@ export default function HomePage() {
                 <h2>Hey, aguarde só um pouco, estamos atualizando o projeto Little Son.</h2>
                 <Ads>
                     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                    <ins className="adsbygoogle" style="display:block" data-ad-client="ca-pub-8744567957048944" data-ad-slot="4351792874" data-ad-format="auto" data-full-width-responsive="true"></ins>
+                    <GoogleAds/>
                     <script src="/scripts/ads.js" />
                 </Ads>
             </Info>
