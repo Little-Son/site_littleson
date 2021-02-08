@@ -44,6 +44,13 @@ const Info = styled.section`
 
 `
 
+const Ads = styled.div`
+    position:absolute;
+    bottom:5vh;
+    width:90vw;
+    height:20vh;
+`
+
 export default function HomePage() {
     return(
         <div>
@@ -51,6 +58,11 @@ export default function HomePage() {
             <Info>
                 <h1>Estamos offline</h1>
                 <h2>Hey, aguarde só um pouco, estamos atualizando o projeto Little Son.</h2>
+                <Ads>
+                    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                    <ins className="adsbygoogle" data-ad-client="ca-pub-8744567957048944" data-ad-slot="4351792874" data-ad-format="auto" data-full-width-responsive="true"></ins>
+                    <script src="/scripts/ads.js" />
+                </Ads>
             </Info>
         </div>
     )
