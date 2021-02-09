@@ -63,13 +63,6 @@ const Ads = styled.div`
     background:#c2e9fb;
 `
 
-class GoogleAds extends React.Component{
-    render() {
-        const block = "block"
-        return <ins className="adsbygoogle" style={{display: block}} data-ad-client="ca-pub-8744567957048944" data-ad-slot="4351792874" data-ad-format="auto" data-full-width-responsive="true"></ins>
-    }
-}
-
 export default function HomePage() {
     return(
         <>
@@ -88,7 +81,7 @@ export default function HomePage() {
                 
                 <Ads>
                     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                    <GoogleAds/>
+                    <ins className="adsbygoogle"  style={{display: 'block'}} data-ad-client="ca-pub-8744567957048944" data-ad-slot="4351792874" data-ad-format="auto" data-full-width-responsive="true"></ins>
                     <script src="/scripts/ads.js" />
                 </Ads>
             </Info>
