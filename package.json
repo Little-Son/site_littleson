@@ -13,7 +13,8 @@
   },
   "keywords": [
     "littleson",
-    "blogger"
+    "blogger",
+    "nextjs"
   ],
   "author": "Jamil Filho",
   "license": "MIT",
@@ -22,19 +23,23 @@
   },
   "homepage": "https://github.com/Little-Son/site_littleson#readme",
   "dependencies": {
-    "graphql-request": "^3.4.0",
-    "gravatar": "^1.8.1",
-    "mongodb": "^3.6.3",
+    "@headlessui/react": "^0.3.0",
+    "@tailwindcss/forms": "^0.2.1",
+    "autoprefixer": "^10.2.4",
+    "date-fns": "^2.17.0",
+    "gray-matter": "^4.0.2",
     "next": "^10.0.5",
-    "next-auth": "^3.1.0",
-    "next-pwa": "^5.0.4",
-    "nodemailer": "^6.4.17",
+    "next-auth": "^3.3.0",
+    "next-pwa": "^5.0.5",
+    "postcss": "^8.2.6",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "styled-components": "^5.2.1",
-    "styled-icons": "^10.25.0"
+    "react-facebook": "^8.1.4",
+    "react-icons": "^4.2.0",
+    "remark": "^13.0.0",
+    "remark-footnotes": "^3.0.0",
+    "remark-html": "^13.0.1",
+    "tailwindcss": "^2.0.3"
   },
-  "devDependencies": {
-    "@types/next-auth": "^3.1.21"
-  }
+  "devDependencies": {}
 }
