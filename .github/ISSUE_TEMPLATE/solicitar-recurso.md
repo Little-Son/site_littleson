@@ -1,6 +1,6 @@
 ---
 name: Solicitar Recurso
-about: Sugestões de recursos e funcionalidade
+about: Sugerir recursos e funcionalidade para o projeto
 title: "[RECURSO]"
 labels: enhancement
 assignees: ''
