@@ -13,7 +13,7 @@ export default function SiteHeader(props) {
             </div>
 
             <Link href="/links">
-                <a className="text-2xl focus:outline-none focus:ring-2 ring-offset-4 focus:text-blue-300 rounded transition-colors"><FiMenu /></a>
+                <a className="mr-6 text-2xl focus:outline-none focus:ring-2 ring-offset-4 focus:text-blue-300 rounded transition-colors"><FiMenu /></a>
             </Link>
         </header>
     )

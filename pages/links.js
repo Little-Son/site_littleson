@@ -20,7 +20,7 @@ export default function LinksPage() {
 
                     <LinkCard icon="📄" title="#LittleDevocional" excerpt="Devocionais diários do projeto Little Son." slug="/littledevocional/"/>
 
-                    <LinkCard icon="📚" title="#LittleEstudos" excerpt="Estudos sobre temas relevantes para sua fé." slug="/littleestudos/"/>
+                    <LinkCard icon="📚" title="#LittleEstudos" excerpt="Estudos bíblicos para os pequenos conhecerem mais sobre a fé." slug="/littleestudos/"/>
                 </div>
             </div>
 
