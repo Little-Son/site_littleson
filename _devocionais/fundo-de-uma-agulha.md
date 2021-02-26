@@ -6,9 +6,6 @@ author:
   name: Jamil Filho
   picture: '/assets/autores/jamil_filho.jpg'
   slug: /jamil-filho
-tag:
-  title: LittleDevocional
-  slug: /littledevocional
 ogImage:
   url: '/assets/thumbnails/littledevocionaldevocional/fundo-de-uma-agulha.png'
 ---
