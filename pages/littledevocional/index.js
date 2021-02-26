@@ -2,7 +2,7 @@ import Head from 'next/head'
 import {TextCard} from '../../components/Card'
 import SiteFooter from '../../components/Footer'
 import SiteHeader from '../../components/Header'
-import { getAllDevotionals } from '../../lib/devocionalAPI'
+import { getAllDevotionals } from '../../lib/devotionalAPI'
 
 export default function HomePage({  allPosts  }) {
     const posts = allPosts
@@ -25,7 +25,7 @@ export default function HomePage({  allPosts  }) {
 
             <section className="littledevocional mb-12">
             {posts.map((post) => (
-                <TextCard key={post.slug} title={post.title} slug={`/littledevocional/${post.slug}`} excerpt={post.excerpt} tagSlug={post.tag.slug} tagTitle={`#${post.tag.title}`}/>
+                <TextCard key={post.slug} title={post.title} slug={`/littledevocional/${post.slug}`} excerpt={post.excerpt} buttonText="Ler Devocional"/>
             ))}
             </section>
         </main>
