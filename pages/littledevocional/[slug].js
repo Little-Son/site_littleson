@@ -45,7 +45,7 @@ export default function DevotionalPage({post}) {
             </section>
 
             <footer className="pt-6 mt-6">
-              <ShareButtons />
+              <ShareButtons title={post.title} url={`littledevocional/${post.slug}`}/>
               
               <section className="mt-12 md:mt-16">
                 <Comment href={`littledevocional/${post.slug}`}/>

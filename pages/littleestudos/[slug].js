@@ -16,9 +16,7 @@ export default function StudyPage({post}) {
     const router = useRouter()
     const studyDate = parseISO(post.date)
     const formattedDate = format(studyDate, 'dd/MM/yyyy')
-
-    console.log(post)
-    
+        
     if (!router.isFallback && !post?.slug) {
         return <ErrorPage statusCode={404} />
     }
@@ -59,9 +57,11 @@ export default function StudyPage({post}) {
                   </div>
 
                   <div className="w-full lg:w-1/2">
-                  <Button ariaLabel="Baixar PDF">
-                    Baixar PDF
-                  </Button>
+                    <form method="GET" action={post.supportMaterial.url}>
+                      <Button ariaLabel="Baixar PDF">
+                        Baixar PDF
+                      </Button>
+                    </form>
                   </div>
                 </div>
 
@@ -69,7 +69,7 @@ export default function StudyPage({post}) {
             </section>
 
             <footer className="pt-6 mt-6">
-              <ShareButtons />
+              <ShareButtons title={post.title} url={`littleestudos/${post.slug}`}/>
               
               <section className="mt-12 md:mt-16">
                 <Comment href={`littleestudos/${post.slug}`}/>
