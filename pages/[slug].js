@@ -30,7 +30,7 @@ export default function AboutPage({post}) {
             </header>
 
             <section className="mb-6">
-              <div className={markdownStyles['markdown']}  dangerouslySetInnerHTML={{ __html: post.content }}/>
+              <div className={markdownStyles['markdown']} dangerouslySetInnerHTML={{ __html: post.content }}/>
             </section>
           </article>
         </main>

@@ -10,6 +10,10 @@
     @apply font-bold text-blue-500;
 }
 
+.markdown blockquote {
+    @apply px-12 italic;
+}
+
 .markdown ul li {
     @apply text-lg text-gray-600 my-2;
 }

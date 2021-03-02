@@ -16,14 +16,14 @@ export default function HomePage({  allPosts  }) {
         </SiteHeader>
 
         <main className="w-4/6 md:w-3/6 mx-auto mt-32 pt-10">
-            <section className="header h-60">
+            <section className="header h-60 md:w-4/5 mx-auto">
                 <div className="mt-8">
                     <h1 className="text-4xl">#LittleDevocional</h1>
                     <h2 className="text-xl">Devocionais diários do projeto Little Son</h2>
                 </div>
             </section>
 
-            <section className="littledevocional mb-12">
+            <section className="littledevocional md:w-4/5 mx-auto mb-12">
             {posts.map((post) => (
                 <TextCard key={post.slug} title={post.title} slug={`/littledevocional/${post.slug}`} excerpt={post.excerpt} buttonText="Ler Devocional"/>
             ))}

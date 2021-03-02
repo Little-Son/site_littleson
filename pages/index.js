@@ -54,13 +54,12 @@ export default function HomePage({ allDevotionals, allStudys }) {
                 </section>
             </div>
 
-            <section className="w-full px-20 mt-20 hidden">
-                <div className="w-full h-72 rounded-lg border-thin border-gray-100 grid grid-cols-3 bg-white md:z-50 overflow-hidden">
+            {/* <section className="w-full px-20 mt-20">
+                <div className="w-full h-72 rounded-lg border-thin border-gray-100 grid grid-cols-3 bg-white overflow-hidden">
                 </div>
-            </section>
+            </section> */}
 
-
-            {/* <div className="w-4/6 md:w-3/6 mx-auto">
+            <div className="w-4/6 md:w-3/6 mx-auto">
                 <section className="littledevocional mb-12">
                     <div className="py-20">
                         <div>
@@ -79,7 +78,7 @@ export default function HomePage({ allDevotionals, allStudys }) {
                         </div>
                     </footer>
                 </section>
-            </div> */}
+            </div>
         </main>
         
         <SiteFooter />
