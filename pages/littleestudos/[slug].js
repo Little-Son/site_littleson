@@ -9,8 +9,7 @@ import { format } from 'date-fns'
 import parseISO from 'date-fns/parseISO'
 import ShareButtons from '../../components/Sharer'
 import { Comment } from '../../components/Comment'
-import { Button } from '../../components/Button'
-import { FiDownload } from 'react-icons/fi'
+import DownloadBox from '../../components/DownloadBox'
 
 export default function StudyPage({post}) {
     const router = useRouter()
@@ -44,36 +43,13 @@ export default function StudyPage({post}) {
 
             <section className="mb-6">
               <div className={markdownStyles['markdown']}  dangerouslySetInnerHTML={{ __html: post.content }}/>
-
-              <div className="w-full mb-6 min-h-32 px-2 py-12 grid grid-cols-3 rounded-lg border-thin border-gray-100 mt-12">
-                <div className="h-full flex justify-center items-center">
-                  <FiDownload className="text-6xl text-gray-400"/>
-                </div>
-
-                <div className="col-span-2 flex flex-col justify-center">
-                  <div className="mb-6">
-                    <p className="text-xl font-bold mb-4 leading-tight">{post.supportMaterial.title}</p>
-                    <p className="text-base">Baixe, gratuitamente, o material de apoio e se aprofunde no estudo.</p>
-                  </div>
-
-                  <div className="w-full lg:w-1/2">
-                    <form method="GET" action={post.supportMaterial.url}>
-                      <Button ariaLabel="Baixar PDF">
-                        Baixar PDF
-                      </Button>
-                    </form>
-                  </div>
-                </div>
-
-              </div>
+              <DownloadBox url={post.supportMaterial.url} title={post.supportMaterial.title} />
             </section>
 
             <footer className="pt-6 mt-6">
               <ShareButtons title={post.title} url={`littleestudos/${post.slug}`}/>
               
-              <section className="mt-12 md:mt-16">
-                <Comment href={`littleestudos/${post.slug}`}/>
-              </section>
+              <Comment href={`littleestudos/${post.slug}`}/>
             </footer>
           </article>
         </main>
