@@ -13,17 +13,17 @@ export default NextAuth({
     })
   ],
 
-  database: process.env.DATABASE_URL,
+  // database: process.env.DATABASE_URL,
 
-  callbacks: {
-    redirect: async (url, baseUrl) => {
-      return url.startsWith(baseUrl)
-        ? Promise.resolve(url)
-        : Promise.resolve(baseUrl)
-    }
-  },
+  // callbacks: {
+  //   redirect: async (url, baseUrl) => {
+  //     return url.startsWith(baseUrl)
+  //       ? Promise.resolve(url)
+  //       : Promise.resolve(baseUrl)
+  //   }
+  // },
 
-  pages: {
-    signIn: '/conta/entrar'
-  }
+  // pages: {
+  //   signIn: '/conta/entrar'
+  // }
 })
