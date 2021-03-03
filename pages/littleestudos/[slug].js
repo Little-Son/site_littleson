@@ -43,7 +43,7 @@ export default function StudyPage({post}) {
 
             <section className="mb-6">
               <div className={markdownStyles['markdown']}  dangerouslySetInnerHTML={{ __html: post.content }}/>
-              <DownloadBox url={post.supportMaterial.url} title={post.supportMaterial.title} />
+              {/* <DownloadBox url={post.supportMaterial.url} title={post.supportMaterial.title} /> */}
             </section>
 
             <footer className="pt-6 mt-6">

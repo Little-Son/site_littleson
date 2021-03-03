@@ -140,5 +140,3 @@ Ao compreender o que a Graça é e o que ela implica em nossa vida cristã cotid
 ## 💭 Para refletir
 
 A Graça não abre as portas para nosso própria vontade, pelo contrário, ela aniquila a nossa vontade e nos capacita para que vivamos a Vontade de Deus a fim de que possamos andar nas boas obras preparadas pelo Senhor antes da fundação do mundo (Efésios 2.10).
-
-## 📚 Material de Apoio
