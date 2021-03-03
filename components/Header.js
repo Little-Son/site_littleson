@@ -35,10 +35,8 @@ export default function SiteHeader(props) {
                             <Menu>
                                 {({ open }) => (
                                 <>
-                                    <Menu.Button>
-                                        <figure className="w-8 h-8 rounded-full bg-gray-300 mx-6">
-                                            <img src={session.user.image} className="w-full object-cover" />
-                                        </figure>
+                                    <Menu.Button className="w-8 h-8 rounded-full bg-gray-300 mx-6">
+                                        <img src={session.user.image} className="w-full object-cover" />
                                     </Menu.Button>
 
                                     <Transition show={open} enter="transition ease-out duration-100" enterFrom="transform opacity-0 scale-95" enterTo="transform opacity-100 scale-100" leave="transition ease-in duration-75" leaveFrom="transform opacity-100 scale-100" leaveTo="transform opacity-0 scale-95">
