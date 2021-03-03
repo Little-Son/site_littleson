@@ -8,7 +8,7 @@ export function Button(props) {
 
 export function ButtonLarge(props) {
     return(
-        <button aria-label={props.ariaLabel} className="flex justify-center items-center px-4 py-4 md:py-6 rounded bg-gray-50 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition-colors focus:ring-2 ring-offset-4">
+        <button aria-label={props.ariaLabel} data-sharer={props.provider} data-title={props.title} data-url={`https://littleson.com.br/${props.url}`} data-via="um_littleson" className="flex justify-center items-center px-4 py-4 md:py-6 rounded bg-gray-50 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition-colors focus:ring-2 ring-offset-4">
             {props.children}
         </button>
     )

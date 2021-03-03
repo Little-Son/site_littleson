@@ -5,9 +5,6 @@ date: '2020-01-09'
 author:
   name: Jamil Filho
   picture: '/assets/autores/jamil_filho.jpg'
-tag:
-  title: LittleDevocional
-  slug: /littledevocional
 ogImage:
   url: '/assets/thumbnails/littledevocional/a-carne-e-fraca.png'
 ---

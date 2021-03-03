@@ -5,11 +5,8 @@ date: '2020-07-24'
 author:
   name: Jamil Filho
   picture: '/assets/autores/jamil_filho.jpg'
-tag:
-  title: LittleDevocional
-  slug: /littledevocional
 ogImage:
-  url: '/assets/thumbnails/pages/sobre.png'
+  url: '/assets/thumbnails/littledevocional/vosso-trabalho-nao-e-em-vao.png'
 ---
 
 ### 📖 Medite

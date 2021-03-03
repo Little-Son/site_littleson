@@ -5,9 +5,6 @@ date: '2020-07-22'
 author:
   name: Jamil Filho
   picture: '/assets/autores/jamil_filho.jpg'
-tag:
-  title: LittleDevocional
-  slug: /littledevocional
 ogImage:
   url: '/assets/thumbnails/pages/sobre.png'
 ---

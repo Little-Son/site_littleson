@@ -1,7 +1,7 @@
 import Link from 'next/link'
-import { FiExternalLink, FiHeart, FiBookmark } from "react-icons/fi"
+import { FiExternalLink } from "react-icons/fi"
 
-export function TextCard({title, slug, excerpt, tagTitle, tagSlug}) {
+export function TextCard({title, slug, excerpt, buttonText}) {
     return(
         <article className="mb-20">
             <header className="w-full mb-4 flex flex-col">
@@ -10,9 +10,6 @@ export function TextCard({title, slug, excerpt, tagTitle, tagSlug}) {
                         <a className="focus:outline-none focus:ring-2 ring-offset-4 focus:text-blue-300 rounded transition-colors">{title}</a>
                     </Link>
                 </h3>
-                <Link href={tagSlug}>
-                    <a className="py-2 text-gray-500 font-bold focus:outline-none focus:ring-2 focus:text-blue-300 rounded transition-colors">{tagTitle}</a>
-                </Link>
             </header>
 
             <section className="mb-6">
@@ -22,7 +19,7 @@ export function TextCard({title, slug, excerpt, tagTitle, tagSlug}) {
                 <div className="w-full lg:w-1/3 grid grid-cols-1">
                     <Link href={slug}>
                         <a className="flex justify-center items-center px-4 py-2 rounded bg-gray-50 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:bg-gray-100 focus:text-gray-500  transition-colors focus:ring-2 ring-offset-4">
-                            Ler devocional <FiExternalLink className="ml-2"/>
+                            {buttonText} <FiExternalLink className="ml-2"/>
                         </a>
                     </Link>
                 </div>

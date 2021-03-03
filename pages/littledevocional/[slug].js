@@ -2,7 +2,7 @@ import Head from 'next/head'
 import { useRouter } from 'next/router'
 import SiteHeader from '../../components/Header'
 import SiteFooter from '../../components/Footer'
-import { getDevotionalBySlug, getAllDevotionals } from '../../lib/devocionalAPI'
+import { getDevotionalBySlug, getAllDevotionals } from '../../lib/devotionalAPI'
 import markdownToHtml from '../../lib/markdownToHtml'
 import markdownStyles from '../../components/markdown-styles.module.css'
 import { format } from 'date-fns'
@@ -14,8 +14,6 @@ export default function DevotionalPage({post}) {
     const router = useRouter()
     const devotionalDate = parseISO(post.date)
     const formattedDate = format(devotionalDate, 'dd/MM/yyyy')
-
-    console.log(post)
     
     if (!router.isFallback && !post?.slug) {
         return <ErrorPage statusCode={404} />
@@ -36,7 +34,7 @@ export default function DevotionalPage({post}) {
                     <h1 className="text-3xl md:text-4xl mb-4">{post.title}</h1>
                     <h2 className="text-lg md:text-xl leading-normal">{post.excerpt}</h2>
                 </div>
-                <div className="w-full flex flex-row">
+                <div className="w-full text-center md:text-left">
                   <span className="mr-2"><strong>Escrito por:</strong> {post.author.name}</span> &bull; 
                   <time className="mx-2" dateTime={post.date}>{formattedDate}</time>
                 </div>
@@ -47,11 +45,9 @@ export default function DevotionalPage({post}) {
             </section>
 
             <footer className="pt-6 mt-6">
-              <ShareButtons />
+              <ShareButtons title={post.title} url={`littledevocional/${post.slug}`}/>
               
-              <section className="mt-12 md:mt-16">
-                <Comment href={`littledevocional/${post.slug}`}/>
-              </section>
+              <Comment href={`littledevocional/${post.slug}`}/>
             </footer>
           </article>
         </main>

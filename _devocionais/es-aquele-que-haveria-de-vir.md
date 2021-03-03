@@ -5,9 +5,6 @@ date: '2020-01-28'
 author:
   name: Jamil Filho
   picture: '/assets/autores/jamil_filho.jpg'
-tag:
-  title: LittleDevocional
-  slug: /littledevocional
 ogImage:
   url: '/assets/thumbnails/littledevocional/es-aquele-que-haveria-de-vir.png'
 ---

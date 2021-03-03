@@ -5,11 +5,8 @@ date: '2020-01-02'
 author:
   name: Jamil Filho
   picture: '/assets/autores/jamil_filho.jpg'
-tag:
-  title: LittleDevocional
-  slug: /littledevocional
 ogImage:
-  url: '/assets/thumbnails/littledevocionaldevocional/a-semente.png'
+  url: '/assets/thumbnails/littledevocional/a-semente.png'
 ---
 
 ### 📖 Medite
