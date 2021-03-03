@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { FiMenu } from "react-icons/fi"
 import { signIn, signOut, useSession } from 'next-auth/client'
+import { Menu, Transition } from "@headlessui/react"
 
 export default function SiteHeader(props) {
     const [session, loading] = useSession()
@@ -29,11 +30,41 @@ export default function SiteHeader(props) {
                     </>
                 )}
                 {session &&  (
-                    <Link href="/conta">
-                    <a className="w-8 h-8 rounded-full bg-gray-300 mx-6">
-                        <img src={session.user.image} className="w-full object-cover" />
-                    </a>
-                    </Link>
+                    <div className="flex items-center justify-center">
+                        <div className="relative inline-block text-left">
+                            <Menu>
+                                {({ open }) => (
+                                <>
+                                    <Menu.Button>
+                                        <figure className="w-8 h-8 rounded-full bg-gray-300 mx-6">
+                                            <img src={session.user.image} className="w-full object-cover" />
+                                        </figure>
+                                    </Menu.Button>
+
+                                    <Transition show={open} enter="transition ease-out duration-100" enterFrom="transform opacity-0 scale-95" enterTo="transform opacity-100 scale-100" leave="transition ease-in duration-75" leaveFrom="transform opacity-100 scale-100" leaveTo="transform opacity-0 scale-95">
+                                        <Menu.Items static className="absolute right-0 w-56 mt-2 origin-top-right bg-white border border-gray-200 divide-y divide-gray-100 rounded-md shadow outline-none">
+                                        <div className="py-1">
+                                            <Menu.Item>
+                                            {({ active }) => (
+                                                <button 
+                                                    className={`${
+                                                        active
+                                                        ? "bg-gray-100 text-gray-900"
+                                                        : "text-gray-700"
+                                                    } flex justify-between w-full px-4 py-2 text-sm leading-5 text-left`}
+                                                    onClick={() => signOut()}>
+                                                        Sair
+                                                </button>
+                                            )}
+                                            </Menu.Item>
+                                        </div>
+                                        </Menu.Items>
+                                    </Transition>
+                                </>
+                                )}
+                            </Menu>
+                        </div>
+                    </div>
                 )}
                 <Link href="/links">
                     <a className="mr-6 text-2xl focus:outline-none focus:ring-2 ring-offset-4 focus:text-blue-300 rounded transition-colors"><FiMenu /></a>
