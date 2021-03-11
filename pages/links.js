@@ -20,11 +20,13 @@ export default function LinksPage() {
                     <p>Confira nossos conteúdos e materiais gratuitos para você.</p>
                 </div>
                 <div className="w-full md:grid grid-cols-2 gap-4">
-                    <LinkCard icon="🗂" title="Biblioteca Little Son" excerpt="Baixe, gratuitamente, nossos wallpapers, desenhos para colorir, atividades e muito mais." slug="/biblioteca"/>
+                    <LinkCard icon="🗂" title="Biblioteca Little Son [Em Breve]" excerpt="Baixe, gratuitamente, nossos wallpapers, desenhos para colorir, atividades e muito mais." slug="#"/>
 
                     <LinkCard icon="📄" title="#LittleDevocional" excerpt="Devocionais diários do projeto Little Son." slug="/littledevocional/"/>
 
                     <LinkCard icon="📚" title="#LittleEstudos" excerpt="Estudos bíblicos para os pequenos conhecerem mais sobre a fé." slug="/littleestudos/"/>
+
+                    <LinkCard icon="📮" title="Little News" excerpt="Novidades exclusivas semanalmente em seu e-mail." slug="https://littlenews.littleson.com.br"/>
 
                     <LinkCard icon="🕹" title="Jogos e Passatempos" excerpt="Em breve jogos interativos e passatempos para brincar e aprender sobre a Bíblia." slug="/"/>
                 </div>
