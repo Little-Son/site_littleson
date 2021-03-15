@@ -11,10 +11,10 @@ export default function SupportMaterial(props) {
             <div className="col-span-2 flex flex-col justify-center">
                 <div className="mb-6">
                 <p className="text-xl font-bold mb-4 leading-tight">{props.title}</p>
-                <p className="text-base">Baixe, gratuitamente, o material de apoio e se aprofunde no estudo.</p>
+                <p className="text-base">{props.description}</p>
                 </div>
                 <div className="w-full lg:w-1/2">
-                    <form method="GET" action={props.url}>
+                    <form method="GET" action={props.url} target="_blanck">
                         <Button ariaLabel="Baixar PDF">
                         Baixar PDF
                         </Button>
