@@ -1,13 +1,8 @@
-const withPWA = require('next-pwa')
+// const withPWA = require('next-pwa')
 
-module.exports = withPWA({
+module.exports = {
   env: {
     ENVIRONMENT: process.env.ENVIRONMENT,
-    NEXTAUTH_URL: process.env.NEXTAUTH_URL,
-    FACEBOOK_CLIENT_ID: process.env.FACEBOOK_CLIENT_ID,
-    FACEBOOK_CLIENT_SECRET: process.env.FACEBOOK_CLIENT_ID,
-    TWITTER_CLIENT_ID: process.env.TWITTER_CLIENT_ID,
-    TWITTER_CLIENT_SECRET: process.env.TWITTER_CLIENT_ID
   },
   pwa: {
     dest: 'public/sw'
@@ -26,4 +21,4 @@ module.exports = withPWA({
       },
     ]
   },
-})
+}
