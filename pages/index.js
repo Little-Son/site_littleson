@@ -5,13 +5,17 @@ import { getAllDevotionals } from '../lib/devotionalAPI'
 import { getAllStudys } from '../lib/studyAPI'
 import { TextCard } from '../components/Card'
 import SiteFooter from '../components/Footer'
+import { getAllLibraries } from '../lib/bibliotecaAPI'
 
-export default function HomePage({ allDevotionals, allStudys }) {
+export default function HomePage({ allDevotionals, allStudys, allLibraries }) {
     const devotionals = allDevotionals.slice(0,3)
     const devotionalLength = allDevotionals
 
     const studys = allStudys.slice(0,3)
     const studyLength = allStudys
+
+    const libraries = allLibraries.slice(0,3)
+    const libraryLength = allLibraries
 
     return(
         <>
@@ -23,15 +27,12 @@ export default function HomePage({ allDevotionals, allStudys }) {
 
         <main className="w-full pt-10">
             <div className="w-4/6 md:w-3/6 mx-auto mt-32 pt-10">
+                
                 <section className="header h-60">
                     <div className="mt-8">
                         <h1 className="text-4xl">Little Son</h1>
                         <h2 className="text-xl">Em Cristo somos feitos pequenos filhos de Deus</h2>
                     </div>
-                </section>
-
-                <section className="w-full border-thin border-gray-100 rounded-lg p-10 mb-10 flex justify-center items-center">
-                    <p className="text-lg"><strong>Atenção:</strong> Ainda estamos atualizando nosso site, por isso algumas funcionalidades e conteúdos não estão disponíveis.</p>
                 </section>
 
                 <section className="littledevocional mb-12">
@@ -54,13 +55,34 @@ export default function HomePage({ allDevotionals, allStudys }) {
                 </section>
             </div>
 
+            <div className="w-4/6 md:w-3/6 mx-auto">
+                <section className="littleestudos mb-12">
+                    <div className="py-20">
+                        <div>
+                            <h1 className="text-4xl">Biblioteca LittleSon</h1>
+                            <h2 className="text-xl">Atividades, ilustrações, wallpapers e muito mais para você baixar gratuitamente.</h2>
+                        </div>
+                    </div>
+                    {libraries.map((post) => (
+                        <TextCard key={post.slug} title={post.title} slug={`/biblioteca/${post.slug}`} excerpt={post.excerpt} buttonText="Ver conteúdo"/>
+                    ))}
+                    <footer>
+                        <div>
+                            <Link href="/biblioteca">
+                                <a className="flex justify-center items-center px-4 py-2 rounded bg-gray-50 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition-colors focus:ring-2 ring-offset-4">Ver todos os {libraryLength.length} conteúdos da biblioteca</a>
+                            </Link>
+                        </div>
+                    </footer>
+                </section>
+            </div>
+
             {/* <section className="w-full px-20 mt-20">
                 <div className="w-full h-72 rounded-lg border-thin border-gray-100 grid grid-cols-3 bg-white overflow-hidden">
                 </div>
             </section> */}
 
             <div className="w-4/6 md:w-3/6 mx-auto">
-                <section className="littledevocional mb-12">
+                <section className="littleestudos mb-12">
                     <div className="py-20">
                         <div>
                             <h1 className="text-4xl">#LittleEstudos</h1>
@@ -103,7 +125,15 @@ export async function getStaticProps() {
       'date'
     ])
 
+    const allLibraries = getAllLibraries([
+      'title',
+      'slug',
+      'excerpt',
+      'tag',
+      'date'
+    ])
+
     return {
-      props: { allDevotionals, allStudys },
+      props: { allDevotionals, allStudys, allLibraries },
     }
 }
