@@ -2,6 +2,7 @@ import Head from 'next/head'
 import { LinkCard } from '../components/Card'
 import SiteFooter from '../components/Footer'
 import SiteHeader from '../components/Header'
+import NewsletterBox from '../components/NewsletterBox'
 
 export default function LinksPage() {
     return(
@@ -20,13 +21,13 @@ export default function LinksPage() {
                     <p>Confira nossos conteúdos e materiais gratuitos para você.</p>
                 </div>
                 <div className="w-full md:grid grid-cols-2 gap-4">
-                    <LinkCard icon="🗂" title="Biblioteca Little Son [Em Breve]" excerpt="Baixe, gratuitamente, nossos wallpapers, desenhos para colorir, atividades e muito mais." slug="#"/>
+                    <LinkCard icon="🗂" title="Biblioteca Little Son" excerpt="Baixe, gratuitamente, nossos wallpapers, desenhos para colorir, atividades e muito mais." slug="/biblioteca"/>
 
                     <LinkCard icon="📄" title="#LittleDevocional" excerpt="Devocionais diários do projeto Little Son." slug="/littledevocional/"/>
 
-                    <LinkCard icon="📚" title="#LittleEstudos" excerpt="Estudos bíblicos para os pequenos conhecerem mais sobre a fé." slug="/littleestudos/"/>
+                    <NewsletterBox />
 
-                    <LinkCard icon="📮" title="Little News" excerpt="Novidades exclusivas semanalmente em seu e-mail." slug="https://littlenews.littleson.com.br"/>
+                    <LinkCard icon="📚" title="#LittleEstudos" excerpt="Estudos bíblicos para os pequenos conhecerem mais sobre a fé." slug="/littleestudos/"/>
 
                     <LinkCard icon="🕹" title="Jogos e Passatempos" excerpt="Em breve jogos interativos e passatempos para brincar e aprender sobre a Bíblia." slug="/"/>
                 </div>
@@ -37,31 +38,28 @@ export default function LinksPage() {
                     <h3 className="w-full text-2xl font-bold">Apoie</h3>
                     <p>Confira algumas maneiras de apoiar o projeto.</p>
                 </div>
-                <div className="w-full md:inline-grid grid-cols-2 gap-4">
-                    
+
+                <div className="w-full md:inline-grid grid-cols-2 gap-4">    
                     <div className="min-h-40 px-4 py-6 border-thin border-gray-100 bg-gray-50 rounded mb-12 col-span-2 flex flex-col md:flex-row">
                         <div className="w-full md:w-3/5 h-full p-6 text-center md:text-left flex flex-col items-center justify-center">
-                            <p className="w-full mb-2 text-2xl font-bold">Faça uma doação</p>
+                            <p className="w-full mb-2 text-2xl font-bold">✌🏻 Faça uma doação</p>
                             <p className="w-full text-base">Faça uma doação única ou mensal e apoie o projeto Little Son.</p>
                         </div>
                         
                         <div className="w-full md:w-2/5 h-full p-6 flex flex-col items-center justify-center">
-                            {/* <form action="https://www.paypal.com/donate" method="post" target="_top">
-                                <input type="hidden" name="hosted_button_id" value="KBHW48DC73JUW" />
-                                <input type="image" src="https://res.cloudinary.com/littleson/image/upload/c_scale,w_170/v1550713937/donate.pt.png" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
-                                <img alt="" border="0" src="https://www.paypal.com/pt_BR/i/scr/pixel.gif" width="1" height="1" />
-                            </form> */}
+                            
                             <form className="w-full" action="https://pagseguro.uol.com.br/pre-approvals/request.html" method="post">
                                 <input type="hidden" name="code" value="A43FD35F6B6B1E1334F5AF9E454EF126" />
                                 <input type="hidden" name="iot" value="button" />
-                                <input type="image" clasName="w-full" src="/images/donate-button-month.png" name="submit" alt="Pague com PagSeguro - É rápido, grátis e seguro!" width="209" height="48" />
+                                <input type="image" clasName="w-full h-auto" src="/images/donate-button-month.png" name="submit" alt="Pague com PagSeguro - É rápido, grátis e seguro!"/>
                             </form>
                             <form className="w-full" action="https://pagseguro.uol.com.br/checkout/v2/donation.html" method="post">
                                 <input type="hidden" name="currency" value="BRL" />
                                 <input type="hidden" name="receiverEmail" value="hello@littleson.com.br" />
                                 <input type="hidden" name="iot" value="button" />
-                                <input type="image" clasName="w-full" src="/images/donate-button-unique.png" name="submit" alt="Pague com PagSeguro - é rápido, grátis e seguro!" />
+                                <input type="image" clasName="w-full h-auto" src="/images/donate-button-unique.png" name="submit" alt="Pague com PagSeguro - é rápido, grátis e seguro!" />
                             </form>
+
                         </div>
                     </div>
 
