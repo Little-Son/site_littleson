@@ -9,6 +9,7 @@ import { format } from 'date-fns'
 import parseISO from 'date-fns/parseISO'
 import ShareButtons from '../../components/Sharer'
 import { Comment } from '../../components/Comment'
+import NewsletterBox from '../../components/NewsletterBox'
 
 export default function DevotionalPage({post}) {
     const router = useRouter()
@@ -45,6 +46,8 @@ export default function DevotionalPage({post}) {
             </section>
 
             <footer className="pt-6 mt-6">
+              <NewsletterBox />
+              
               <ShareButtons title={post.title} url={`littledevocional/${post.slug}`}/>
               
               <Comment href={`littledevocional/${post.slug}`}/>

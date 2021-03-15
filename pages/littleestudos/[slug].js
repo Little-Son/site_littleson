@@ -10,6 +10,7 @@ import parseISO from 'date-fns/parseISO'
 import ShareButtons from '../../components/Sharer'
 import { Comment } from '../../components/Comment'
 import DownloadBox from '../../components/DownloadBox'
+import NewsletterBox from '../../components/NewsletterBox'
 
 export default function StudyPage({post}) {
     const router = useRouter()
@@ -43,10 +44,12 @@ export default function StudyPage({post}) {
 
             <section className="mb-6">
               <div className={markdownStyles['markdown']}  dangerouslySetInnerHTML={{ __html: post.content }}/>
-              {/* <DownloadBox url={post.supportMaterial.url} title={post.supportMaterial.title} /> */}
+              {/* <DownloadBox url={post.supportMaterial.url} title={post.supportMaterial.title} description={post.supportMaterial.description}/> */}
             </section>
 
             <footer className="pt-6 mt-6">
+              <NewsletterBox />
+
               <ShareButtons title={post.title} url={`littleestudos/${post.slug}`}/>
               
               <Comment href={`littleestudos/${post.slug}`}/>
